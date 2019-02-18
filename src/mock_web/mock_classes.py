@@ -1,3 +1,5 @@
+import rospy
+
 class MockTrigger():
 
     def __init__(self):
@@ -6,4 +8,4 @@ class MockTrigger():
     def callback(self, data):
         if data.data is True:
             self.triggered = True
-            print "Triggered!"
+            rospy.loginfo("Triggered!")

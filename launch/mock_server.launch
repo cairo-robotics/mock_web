@@ -1,0 +1,9 @@
+<launch>
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" > 
+     <arg name="port" value="8080"/>
+  </include>
+
+   <node pkg="mock_web" type="mock_trigger.py" name="mock_trigger" output="screen"></node>
+
+</launch>
+
