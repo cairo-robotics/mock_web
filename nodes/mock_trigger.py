@@ -6,8 +6,10 @@ from std_msgs.msg import Bool
 
 
 if __name__ == '__main__':
-    mock_trigger = MockTrigger()
     rospy.init_node('mock_web_test')
+    mock_trigger_1 = MockTrigger("Trigger 1")
+    mock_trigger_2 = MockTrigger("Trigger 2")
 
-    sub = rospy.Subscriber('mock_trigger', Bool, mock_trigger.callback)
+    sub1 = rospy.Subscriber('/mock_trigger_1', Bool, mock_trigger_1.callback)
+    sub2 = rospy.Subscriber('/mock_trigger_2', Bool, mock_trigger_2.callback)
     rospy.spin()    

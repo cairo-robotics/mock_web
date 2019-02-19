@@ -4,6 +4,7 @@
   </include>
 
    <node pkg="mock_web" type="mock_trigger.py" name="mock_trigger" output="screen"></node>
+   <node pkg="mock_web" type="mock_toggle.py" name="mock_toggle" output="screen"></node>
 
 </launch>
 
